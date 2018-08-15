@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="user-scalable=0, width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=100">
+  <title>Liveperson Chat Demo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link id="jquery_ui_theme_loader" type="text/css" href="js/jquery/themes/black-tie/jquery-ui.css" rel="stylesheet"/>
+  <link type="text/css" href="js/jquery/window/css/jquery.window.css" rel="stylesheet"/>
+  <link type="text/css" href="style.css" rel="stylesheet"/>
+	<link type="text/css" href="lp.css" rel="stylesheet"/>
+  <script>
+      var site = 70633487;
+      var lptag = false;
+      var divid = 'startChat';
+  </script>
+
+</head>
+<body class="bg">
+<div id="engagementPlaceholder"></div>
+
+
+
+<div id ="chatWindow" class="lp_desktop hidden">
+	<div id="lpChat" style="display: block;" class="lp_main_ltr lp_en-US">
+		<div class="lp_maximized lpmx" role="region" style="right: 20px; bottom: 0px; display: block;">
+			<div class="lp_header" role="navigation" style="background-color:#0a2f64">
+				<div class="lp_header-content-wrapper">
+					<button title="{{tooltip_open_widgets}}" class="lp_hidden lp_slider">
+						<div class="lp-slider-icon lp_icon-white">
+							<img src="https://lpcdn.lpsnmedia.net/le_unified_window/9.4.4.0-release_1795/resources/icons/desktop/sprites_v1.png" alt="" aria-hidden="true">
+						</div>
+					</button>
+					<div class="lp_notification_number wsdkNotification lpHide">
+						<span class="lp_notification_text">0</span>
+					</div>
+					<div class="lp_title">
+						<div class="lp_chatting-with-icon lp_icon-white" style="display: inline-block;">
+							<img src="https://lpcdn.lpsnmedia.net/le_unified_window/9.4.4.0-release_1795/resources/icons/desktop/sprites_v1.png" alt="" aria-hidden="true">
+						</div>
+						<span class="lp_top-text" role="presentation" style="color:#FFFFFF;font-style:normal;font-family:Arial,Helvetica,sans-serif;font-weight:normal">Chat Assistant</span>
+					</div>
+					<div class="lp_header-buttons-container">
+						<button title="Minimize" class="lp_minimize" role="button">
+							<div class="lp_minimize-icon lp_icon-white">
+								<img src="https://lpcdn.lpsnmedia.net/le_unified_window/9.4.4.0-release_1795/resources/icons/desktop/sprites_v1.png?v=9.4.4.0-release_1795" alt="Minimize" aria-hidden="true">
+							</div>
+						</button>
+						<button title="{{tooltip_Popout_topbar}}" class="lp_popout" role="button">
+							<div class="lp_pop-out-icon lp_icon-white" >
+								<img src="https://lpcdn.lpsnmedia.net/le_unified_window/9.4.4.0-release_1795/resources/icons/desktop/sprites_v1.png" alt="" aria-hidden="true">
+							</div>
+						</button>
+						<button title="End conversation" class="lp_close" role="button">
+							<div id="closeChat" class="lp_close-icon lp_icon-white" >
+								<img src="https://lpcdn.lpsnmedia.net/le_unified_window/9.4.4.0-release_1795/resources/icons/desktop/sprites_v1.png?v=9.4.4.0-release_1795" alt="End conversation" aria-hidden="true">
+							</div>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="lp_main" role="main" style="background-color:#FFFFFF">
+				<div id="LP_MaximizedViewController_1" style="display: block;" class="">
+					<div class="lp_lpview_mp lp_main_area">
+						<div id="lp_wait" class="lp_wait">
+							<table class="lp_centralizer">
+								<tbody>
+									<tr>
+										<td>
+											<div class="lp_rotator-container">
+												<div class="lp_rotator-container-bg"/>
+												<div class="lp_rotator">
+													<img src="https://lpcdn.lpsnmedia.net/le_unified_window/9.4.4.0-release_1795/resources/loader_on_warmGray5_75.gif" alt="imageAltText" role="alert">
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="scroll_div" class="lp_location_center" style="display: block;">
+							<div class="lp_transcript_widget lp_lpview_widgetContent transcript_scroll" role="log" aria-label="Chat messages" style="background-color: rgb(255, 255, 255); display: block;" id="LP_TranscriptViewController_1" aria-live="assertive" aria-relevant="additions" aria-atomic="false">
+								<div id="LP_LogoViewController_1" style="display: block;">
+									<div class="lp_logo_area_wrapper" title="">
+										<a class="lp_logo_link disableLinkClass" href="#" onclick="return false;" title="" tabindex="">
+											<div class="lp_logo_image_wrapper" style="text-align:center;background-color:#FFFFFF">
+												<img src="https://personal.rbs.co.uk/content/dam/rbs_co_uk/WatsonDemo/RBS_NeedHelp_Logo_140x32.png" alt="" class="lp_image">
+											</div>
+										</a>
+									</div>
+								</div>
+								<div id="agent_image_area"></div>
+								<div id="rotator_area"></div>
+								<div id="lines_area">
+								
+								</div>
+							</div>
+						</div>
+						<div class="lp_location_bottom" style="color: rgb(109, 110, 112); font-style: normal; background-color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-weight: normal; display: block;">
+							<div class="lpview_bottom_container" id="LP_ChatViewController_1" style="display: block;">
+								<div id="agent_is_typing" class="lp_lpview_agent_is_typing lp_agent_is_typing lpHide" role="region">Agent is typing...</div>
+								<div class="lp_bottom_area" role="region" aria-live="polite" style="color:#6D6E70;font-style:normal;background-color:#FFFFFF;font-family:Arial,Helvetica,sans-serif;font-weight:normal">
+									<button id="micButton" class="lp_actions_button" type="button" title="Mic" aria-label="Microphone" accept="audio/*;capture=microphone">
+										<div class="lp_actions-closed-icon lp_icon-dark">
+											<img src="mic.png" alt="" aria-hidden="true">
+										</div>
+									</button>
+									<div class="lp_input_area">
+										<input type="text" id="textline" class="lpview_form_textarea lp_expandable_textarea lp_ltr" aria-label="Enter text here" title="Enter text here" style="color: rgb(0, 0, 0); font-style: normal; font-family: Arial, Helvetica, sans-serif; font-weight: normal; overflow-y: hidden;" placeholder="Enter text here"/>
+									</div>
+									<button id="sendButton" class="lp_send_button" title="Send" disabled>
+										<div class="lp_send-icon lp_icon-dark">
+											<img src="https://lpcdn.lpsnmedia.net/le_unified_window/9.4.4.0-release_1795/resources/icons/desktop/sprites_v1.png" alt="">
+										</div>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="logs" class="hidden"></div>
+<script src="js/watson-speech.js"></script>
+<!-- window.fetch pollyfill for IE/Edge & Older Chrome/FireFox -->
+<script src="js/fetch.js"></script>
+
+<script>
+    if (divid) {
+        var chatdiv = document.createElement('div');
+        chatdiv.id = divid;
+        document.getElementById('engagementPlaceholder').appendChild(chatdiv);
+    }
+</script>
+<script type="text/javascript" src="js/jquery/jquery.js"></script>
+<script type="text/javascript" src="js/jquery/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery/window/jquery.window.js"></script>
+<script type="text/javascript" src="https://lpcdn.lpsnmedia.net/api/chat/public/lpChat.min.js"></script>
+<script src="LiveEngageScript.js"></script>
+
+
+</html>

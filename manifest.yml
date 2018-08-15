@@ -1,0 +1,11 @@
+---
+declared-services:
+   Speech to Text-PoC:
+    label: speech_to_text
+    plan: standard
+applications:
+- name:    live-engage-integration
+  random-route: true
+  memory:  256M
+  services:
+  -  Speech to Text-PoC

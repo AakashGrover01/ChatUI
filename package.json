@@ -1,0 +1,20 @@
+{
+  "name": "live-engage-test",
+  "version": "0.0.0",
+  "dependencies": {
+    "cf-deployment-tracker-client": "*",
+    "commander": "^2.6.0",
+    "express": "^4.14.1",
+    "http-post": "^0.1.1",
+    "http-proxy": "^1.8.1",
+    "vcap_services": "^0.3.4",
+    "watson-developer-cloud": "^2.33.0",
+    "watson-speech": "^0.34.1",
+    "mic": "^2.1.1",
+    "wav": "^1.0.1"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
